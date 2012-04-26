@@ -1,0 +1,9 @@
+<h1>Pokemon#all</h1>
+<ul>
+    <% @pokemons.each do |pokemon| %>
+        <li>(<%= pokemon.no %>)
+            <%= pokemon.name %>
+        </li>
+    <% end %>
+        
+</ul>

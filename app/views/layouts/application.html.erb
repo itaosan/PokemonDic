@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>スマポケ図鑑</title>
+
+    <script type="text/javascript">
+        var addToHomeConfig = {
+//            animationIn: 'bubble',
+//            animationOut: 'drop',
+            lifespan:5000,
+//            expire:2,
+            touchIcon:true,
+            autostart:false,
+            message:'`%icon`をタップして「ホーム画面に追加」を行うと、すぐにアクセスできます。'
+        };
+    </script>
+
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <%= yield :header %>
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', '<%= ENV['GAQ_UA']%>']);
+        _gaq.push(['_setDomainName', '<%= ENV['GAQ_DOMAIN']%>']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head>
+<body>
+
+<%= yield %>
+
+<%= yield :footer %>
+</body>
+</html>

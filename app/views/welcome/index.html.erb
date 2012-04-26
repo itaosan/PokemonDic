@@ -1,0 +1,86 @@
+<% content_for :header do %>
+    <!--header  -->
+    <% if mobile_device? %>
+        <%=	 stylesheet_link_tag '/resources/app.css' %>
+        <%=	 javascript_include_tag '/resources/sencha-touch-all.js' %>
+        <%=	 javascript_include_tag '/app/app.js' %>
+    <% else %>
+    <% end %>
+<% end %>
+
+<!--body-->
+<% if mobile_device? %>
+    <script type="text/javascript">
+        addToHome.show();
+    </script>
+<% else %>
+    <div class="container">
+        <div class="inner">
+            <p>
+                <img src="resources/title.png" alt="logo">
+            </p>
+        </div>
+        <div class="row">
+            <div class="span7">
+                <h2>このサイトは？</h2>
+                <p>
+                    スマートフォンに最適化されたポケモン図鑑です。
+                </p>
+                <p>
+                    スマートフォンでこのURLか下のQRコードを読み取ってアクセスして下さい。
+                </p>
+                <p>
+                    スマートフォンでアクセスすると右の画面になり、ポケモンが検索できます。
+                </p>
+                <img src="resources/QRcode.gif" alt="スマートフォンで読み取って下さい">
+
+            </div>
+            <div class="span3">
+                <img src="resources/sample.jpg" alt="screen">
+            </div>
+        </div>
+        <p>
+            ポケモンのデータは<a href="http://pokemon.maruamyu.net/">ポケモンの友</a>さんのデータを使用しています。
+        </p>
+        <p>
+            質問、要望等は<a href="https://twitter.com/#!/itaosan">twitter(@itaosan)</a>まで<br>
+            <a href="https://twitter.com/intent/tweet?screen_name=itaosan" class="twitter-mention-button" data-lang="ja" data-related="itaosan">Tweet to @itaosan</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </p>
+        <hr>
+
+        <div class="row">
+            <div class="span2">
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://pokemon.7toybox.com" data-text="スマホでポケモン検索！&quot;スマポケ図鑑&quot;" data-lang="ja" data-related="itaosan">ツイート</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </div>
+            <div class="span2">
+                <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fpokemon.7toybox.com&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+            </div>
+            <div class="span2">
+                <a href="http://b.hatena.ne.jp/entry/http://pokemon.7toybox.com" class="hatena-bookmark-button" data-hatena-bookmark-title="スマホでポケモン検索！スマポケ図鑑" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+            </div>
+            <div class="span2">
+                <a href="http://mixi.jp/share.pl" class="mixi-check-button" data-key="322204ccfd337b2ee567aebacb42866ec86daf64">mixiチェック</a>
+                <script type="text/javascript" src="http://static.mixi.jp/js/share.js"></script>
+            </div>
+            <div class="span2">
+                <!-- このタグを +1 ボタンを表示する場所に挿入してください -->
+                <g:plusone size="medium"></g:plusone>
+
+                <!-- この render 呼び出しを適切な位置に挿入してください -->
+                <script type="text/javascript">
+                    window.___gcfg = {lang: 'ja'};
+
+                    (function() {
+                        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                        po.src = 'https://apis.google.com/js/plusone.js';
+                        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                    })();
+                </script>
+            </div>
+        </div>
+    </div>
+<% end %>
+
+
